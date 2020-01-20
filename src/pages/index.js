@@ -6,10 +6,11 @@ import LabelText from '../components/LabelText';
 import Layout from '../components/layout/Layout';
 import SplitSection from '../components/SplitSection';
 import StatsBox from '../components/StatsBox';
+import ContactForm from '../components/ContactForm';
 import customerData from '../data/customer-data';
 import HeroImage from '../svg/HeroImage';
-import bryce from '../../public/static/bryce.jpeg';
-import amanda from '../../public/static/amanda.png';
+import bryce from '../images/bryce.jpeg';
+import amanda from '../images/amanda.png';
 
 export default () => (
   <Layout>
@@ -34,7 +35,7 @@ export default () => (
         </div>
       </div>
     </section>
-    <section id="features" className="py-20 lg:pb-40 lg:pt-48">
+    <section id="services" className="py-20 lg:pb-40 lg:pt-48">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl lg:text-5xl font-semibold">Our Services</h2>
         <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
@@ -68,11 +69,10 @@ export default () => (
         </div>
       </div>
     </section>
-    <section id="features" className="py-20 lg:pb-40">
+    <section id="about" className="py-20 lg:pb-40">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl lg:text-5xl font-semibold">About</h2>
         <SplitSection
-          id="services"
           primarySlot={
             <div className="lg:pr-32 xl:pr-48">
               <h3 className="text-3xl font-semibold leading-tight">Amanda Nelson</h3>
@@ -105,7 +105,6 @@ export default () => (
         />
       </div>
     </section>
-
     <section id="stats" className="py-20 lg:pt-32">
       <div className="container mx-auto text-center">
         <LabelText className="text-gray-600">Our customers get results</LabelText>
@@ -134,14 +133,12 @@ export default () => (
         </div>
       </div>
     </section>
-    <section className="container mx-auto my-20 py-24 bg-gray-200 rounded-lg text-center">
+    <section
+      className="container mx-auto my-20 py-24 bg-gray-200 rounded-lg text-center"
+      id="contact"
+    >
       <h3 className="text-5xl font-semibold">Ready to grow your business?</h3>
-      <p className="mt-8 text-xl font-light">
-        Quis lectus nulla at volutpat diam ut. Enim lobortis scelerisque fermentum dui faucibus in.
-      </p>
-      <p className="mt-8">
-        <Button size="xl">Get Started Now</Button>
-      </p>
+      <ContactForm />
     </section>
   </Layout>
 );
